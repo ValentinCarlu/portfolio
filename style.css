@@ -659,6 +659,7 @@ body {
 .timeline-experiences {
     position: relative;
     padding-left: 2rem;
+    margin-bottom: 2rem;
 }
 
 .timeline-experiences::before {
@@ -853,6 +854,97 @@ body {
 .message-contact p {
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+/* Projets */
+
+.section-projets {
+    min-height: 100vh;
+    padding: 6rem 8% 4rem;
+}
+
+.container-projets {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.projet-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.projet-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    overflow: hidden;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projet-contenu {
+    padding: 2rem;
+}
+
+.projet-titre {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.projet-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+}
+
+.projet-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: #f5f1e8;
+    color: #2c3e50;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.projet-lien {
+    display: inline-block;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.projet-lien:hover {
+    transform: translateX(5px);
 }
 
 /* Responsive */
@@ -1059,6 +1151,18 @@ body {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    .section-projets {
+        padding: 4rem 5% 3rem;
+    }
+
+    .grille-projets {
+        grid-template-columns: 1fr;
+    }
+
+    .projet-image {
+        height: 200px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1159,5 +1263,17 @@ body {
 
     .message-contact p {
         font-size: 1rem;
+    }
+
+    .projet-contenu {
+        padding: 1.5rem;
+    }
+
+    .projet-titre {
+        font-size: 1.3rem;
+    }
+
+    .projet-description {
+        font-size: 0.95rem;
     }
 }
