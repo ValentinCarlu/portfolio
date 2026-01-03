@@ -53,7 +53,7 @@ body {
     padding: 0 8%;
 }
 
-.container {
+.conteneur {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -201,7 +201,7 @@ body {
     padding: 6rem 8% 4rem;
 }
 
-.container-apropos {
+.conteneur-apropos {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -242,6 +242,9 @@ body {
 
 .conteneur-bouton-cv {
     text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .bouton-cv {
@@ -444,7 +447,7 @@ body {
     padding: 6rem 8% 4rem;
 }
 
-.container-competences {
+.conteneur-competences {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -562,7 +565,7 @@ body {
     padding: 6rem 8% 4rem;
 }
 
-.container-experiences {
+.conteneur-experiences {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -788,7 +791,7 @@ body {
     align-items: center;
 }
 
-.container-contact {
+.conteneur-contact {
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
@@ -863,7 +866,7 @@ body {
     padding: 6rem 8% 4rem;
 }
 
-.container-projets {
+.conteneur-projets {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -958,7 +961,7 @@ body {
         height: 400px;
     }
 
-    .container {
+    .conteneur {
         gap: 3rem;
     }
 
@@ -984,7 +987,7 @@ body {
 }
 
 @media (max-width: 968px) {
-    .container {
+    .conteneur {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -1275,5 +1278,17 @@ body {
 
     .projet-description {
         font-size: 0.95rem;
+    }
+
+    .timeline-exp-item::before {
+        left: -2rem;
+    }
+
+    .timeline-item::before {
+        left: -2rem;
+    }
+
+    .conteneur-bouton-cv {
+        flex-direction: column;
     }
 }
